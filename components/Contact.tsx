@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
@@ -74,13 +73,14 @@ export default function Contact() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="p-8 rounded-3xl bg-[#0B0F19] border border-[#0088FF]/30 flex flex-col gap-4">
+          <form onSubmit={handleSubmit} className="p-8 rounded-3xl bg-[#0B0F19] border border-[#0088FF]/30 flex flex-col gap-4" suppressHydrationWarning>
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mb-1.5 block">Name</label>
                 <input
                   type="text"
                   required
+                  suppressHydrationWarning
                   value={form.name}
                   onChange={e => setForm({ ...form, name: e.target.value })}
                   placeholder="Fadl Ghazaly"
@@ -92,6 +92,7 @@ export default function Contact() {
                 <input
                   type="email"
                   required
+                  suppressHydrationWarning
                   value={form.email}
                   onChange={e => setForm({ ...form, email: e.target.value })}
                   placeholder="you@example.com"
@@ -105,6 +106,7 @@ export default function Contact() {
               <input
                 type="text"
                 required
+                suppressHydrationWarning
                 value={form.subject}
                 onChange={e => setForm({ ...form, subject: e.target.value })}
                 placeholder="Project Collaboration"
@@ -117,6 +119,7 @@ export default function Contact() {
               <textarea
                 required
                 rows={4}
+                suppressHydrationWarning
                 value={form.message}
                 onChange={e => setForm({ ...form, message: e.target.value })}
                 placeholder="Tell me about your project..."
