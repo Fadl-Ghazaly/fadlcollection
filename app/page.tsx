@@ -12,7 +12,7 @@ import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#050811] text-[#e4e4e7] overflow-x-hidden selection:bg-[#00F0FF] selection:text-[#050811]">
+    <main className="relative min-h-screen bg-[#07040D] text-[#e4e4e7] overflow-x-hidden selection:bg-[#A855F7] selection:text-[#07040D]">
       <Preloader />
       <CanvasBackground />
       <ScrollProgress />
@@ -27,13 +27,13 @@ export default function Home() {
       <Contact />
 
       {/* Footer */}
-      <footer className="relative border-t border-[#0088FF]/20 bg-[#050811]">
+      <footer className="relative border-t border-purple-500/30 bg-[#07040D]">
         <div className="section-container py-16">
           <div className="flex flex-col items-center gap-6 text-center">
             
             <a href="#home" className="inline-flex items-center">
               <span className="font-black text-2xl tracking-tight text-white">
-                Fadl<span className="text-[#00F0FF] drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]">Collection</span>
+                Fadl<span className="text-fuchsia-400 drop-shadow-[0_0_10px_rgba(217,70,239,0.6)]">Collection</span>
               </span>
             </a>
 
@@ -55,7 +55,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-10 h-10 rounded-full bg-[#0B0F19] border border-[#0088FF]/30 flex items-center justify-center text-zinc-400 hover:text-[#00F0FF] hover:border-[#00F0FF]/60 transition-all"
+                  className="w-10 h-10 rounded-full bg-[#0F091A] border border-purple-500/30 flex items-center justify-center text-zinc-400 hover:text-purple-300 hover:border-purple-400/60 transition-all"
                 >
                   <i className={`${s.icon} text-sm`} />
                 </a>
@@ -65,12 +65,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="border-t border-[#0088FF]/10 py-6 bg-[#050811]">
-          <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        <div className="border-t border-purple-500/10 py-6 bg-[#07040D]">
+          <div className="section-container flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-purple-400/60 font-mono">
             <span>© 2026 FadlCollection. All rights reserved.</span>
-            <span className="flex items-center gap-1.5 font-mono">
-              SECURE CYBERNETIC PROTOCOL ACTIVE // NEXT.JS 14
-            </span>
+            <span>SECURE CYBERNETIC PROTOCOL ACTIVE // NEXT.JS 14</span>
           </div>
         </div>
       </footer>

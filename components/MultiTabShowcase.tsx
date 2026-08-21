@@ -109,12 +109,12 @@ export default function MultiTabShowcase() {
   const [activeTab, setActiveTab] = useState<'PROJECTS' | 'CERTIFICATES' | 'TECH STACK'>('PROJECTS')
 
   return (
-    <section id="projects" className="relative py-24 bg-[#050811]/60">
+    <section id="projects" className="relative py-24 bg-[#07040D]/60">
       <div className="section-container">
         
         {/* Tab Navigation Buttons */}
         <div className="flex justify-center mb-16">
-          <div className="inline-flex p-1.5 rounded-full bg-[#0B0F19] border border-[#0088FF]/30 shadow-[0_0_30px_rgba(0,136,255,0.15)]">
+          <div className="inline-flex p-1.5 rounded-full bg-[#0F091A] border border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.15)]">
             {(['PROJECTS', 'CERTIFICATES', 'TECH STACK'] as const).map(tab => (
               <button
                 key={tab}
@@ -122,7 +122,7 @@ export default function MultiTabShowcase() {
                 suppressHydrationWarning
                 className={`relative px-8 py-3 rounded-full text-xs md:text-sm font-bold tracking-wider transition-all duration-300 ${
                   activeTab === tab
-                    ? 'text-[#050811] bg-gradient-to-r from-[#00F0FF] to-[#0088FF] shadow-[0_0_20px_rgba(0,240,255,0.4)]'
+                    ? 'text-white bg-gradient-to-r from-purple-500 via-fuchsia-500 to-violet-600 shadow-[0_0_20px_rgba(168,85,247,0.5)]'
                     : 'text-zinc-400 hover:text-white'
                 }`}
               >
@@ -153,18 +153,18 @@ export default function MultiTabShowcase() {
                   transition={{ delay: i * 0.1 }}
                 >
                   <Tilt maxTilt={8} className="h-full">
-                    <div className="h-full rounded-2xl bg-[#0B0F19]/90 border border-[#0088FF]/30 p-6 flex flex-col justify-between hover:border-[#00F0FF]/60 hover:shadow-[0_0_30px_rgba(0,240,255,0.2)] transition-all duration-300 group">
+                    <div className="h-full rounded-2xl bg-[#0F091A]/95 border border-purple-500/30 p-6 flex flex-col justify-between hover:border-purple-400/70 hover:shadow-[0_0_30px_rgba(168,85,247,0.25)] transition-all duration-300 group">
                       <div>
                         <div className="flex items-center justify-between mb-4">
-                          <div className="w-12 h-12 rounded-xl bg-[#0088FF]/10 border border-[#0088FF]/30 flex items-center justify-center text-[#00F0FF]">
+                          <div className="w-12 h-12 rounded-xl bg-purple-950/40 border border-purple-500/40 flex items-center justify-center text-purple-300">
                             <i className={project.icon} />
                           </div>
-                          <span className="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#0088FF]/10 text-[#00F0FF] border border-[#0088FF]/20">
+                          <span className="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-md bg-purple-950/40 text-purple-300 border border-purple-500/30">
                             {project.category}
                           </span>
                         </div>
 
-                        <h3 className="text-white font-bold text-lg mb-2 group-hover:text-[#00F0FF] transition-colors">
+                        <h3 className="text-white font-bold text-lg mb-2 group-hover:text-purple-300 transition-colors">
                           {project.title}
                         </h3>
                         <p className="text-zinc-400 text-xs leading-relaxed mb-6">
@@ -186,7 +186,7 @@ export default function MultiTabShowcase() {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-xs font-bold text-[#00F0FF] hover:underline"
+                            className="inline-flex items-center gap-2 text-xs font-bold text-purple-400 hover:text-fuchsia-300"
                           >
                             <span>LIVE PREVIEW</span>
                             <i className="fas fa-external-link-alt text-[10px]" />
@@ -226,13 +226,13 @@ export default function MultiTabShowcase() {
                       href={cert.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="h-full rounded-2xl bg-[#0B0F19]/90 border border-[#0088FF]/30 p-6 flex flex-col justify-between hover:border-[#00F0FF]/60 hover:shadow-[0_0_30px_rgba(0,240,255,0.2)] transition-all duration-300 group block"
+                      className="h-full rounded-2xl bg-[#0F091A]/95 border border-purple-500/30 p-6 flex flex-col justify-between hover:border-purple-400/70 hover:shadow-[0_0_30px_rgba(168,85,247,0.25)] transition-all duration-300 group block"
                     >
                       <div>
-                        <div className="w-12 h-12 rounded-xl bg-[#0088FF]/10 border border-[#0088FF]/30 flex items-center justify-center text-[#00F0FF] mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-purple-950/40 border border-purple-500/40 flex items-center justify-center text-purple-300 mb-4">
                           <i className={cert.icon} />
                         </div>
-                        <h3 className="text-white font-bold text-base mb-1 group-hover:text-[#00F0FF] transition-colors">
+                        <h3 className="text-white font-bold text-base mb-1 group-hover:text-purple-300 transition-colors">
                           {cert.title}
                         </h3>
                         <p className="text-zinc-400 text-xs">{cert.issuer}</p>
@@ -243,7 +243,7 @@ export default function MultiTabShowcase() {
                         )}
                       </div>
 
-                      <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#00F0FF]">
+                      <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs text-purple-400">
                         <span>VERIFY CREDENTIAL</span>
                         <i className="fas fa-arrow-right" />
                       </div>
@@ -265,18 +265,18 @@ export default function MultiTabShowcase() {
               className="flex flex-col gap-12 max-w-4xl mx-auto"
             >
               {techStackData.map((group) => (
-                <div key={group.category} className="rounded-2xl bg-[#0B0F19]/90 border border-[#0088FF]/30 p-8">
-                  <h3 className="text-sm font-mono tracking-widest text-[#00F0FF] mb-6 uppercase flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#00F0FF] animate-pulse" />
+                <div key={group.category} className="rounded-2xl bg-[#0F091A]/95 border border-purple-500/30 p-8">
+                  <h3 className="text-sm font-mono tracking-widest text-purple-400 mb-6 uppercase flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
                     {group.category}
                   </h3>
                   <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {group.skills.map(skill => (
                       <div
                         key={skill.name}
-                        className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:border-[#00F0FF]/40 transition-all"
+                        className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:border-purple-400/50 transition-all"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-[#0088FF]/10 flex items-center justify-center text-[#00F0FF]">
+                        <div className="w-9 h-9 rounded-lg bg-purple-950/40 flex items-center justify-center text-purple-300">
                           <i className={skill.icon} />
                         </div>
                         <div>

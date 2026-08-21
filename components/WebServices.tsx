@@ -51,11 +51,11 @@ const services = [
 
 export default function WebServices() {
   return (
-    <section id="services" className="relative py-24 bg-[#050811]/90">
+    <section id="services" className="relative py-24 bg-[#07040D]/90">
       <div className="section-container">
         
         <div className="text-center mb-16">
-          <p className="text-xs font-mono uppercase tracking-widest text-[#00F0FF] mb-3">
+          <p className="text-xs font-mono uppercase tracking-widest text-fuchsia-400 mb-3">
             PREMIUM DEVELOPMENT &amp; DIGITAL SOLUTION
           </p>
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
@@ -64,7 +64,7 @@ export default function WebServices() {
           <p className="text-zinc-400 text-sm max-w-xl mx-auto mt-4 leading-relaxed">
             Membangun keberadaan digital yang kredibel dan inovatif untuk bisnis Anda. Kami mengombinasikan desain estetis dengan teknologi mutakhir untuk hasil yang terukur.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#00F0FF] to-[#0088FF] mx-auto rounded-full mt-6" />
+          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-violet-600 mx-auto rounded-full mt-6" />
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -77,17 +77,17 @@ export default function WebServices() {
               transition={{ delay: i * 0.1 }}
             >
               <Tilt maxTilt={6} className="h-full">
-                <div className={`relative rounded-3xl bg-[#0B0F19] border ${service.popular ? 'border-[#00F0FF] shadow-[0_0_40px_rgba(0,240,255,0.2)]' : 'border-[#0088FF]/30'} p-8 flex flex-col justify-between h-full group hover:border-[#00F0FF]/60 transition-all duration-300`}>
+                <div className={`relative rounded-3xl bg-[#0F091A] border ${service.popular ? 'border-purple-400 shadow-[0_0_40px_rgba(168,85,247,0.3)]' : 'border-purple-500/30'} p-8 flex flex-col justify-between h-full group hover:border-purple-400/60 transition-all duration-300`}>
                   
                   {service.popular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#00F0FF] to-[#0088FF] text-[#050811] text-[10px] font-black uppercase tracking-widest">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-violet-600 text-white text-[10px] font-black uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.5)]">
                       MOST POPULAR
                     </div>
                   )}
 
                   <div>
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-2xl bg-[#0088FF]/10 border border-[#0088FF]/30 flex items-center justify-center text-[#00F0FF]">
+                      <div className="w-12 h-12 rounded-2xl bg-purple-950/40 border border-purple-500/40 flex items-center justify-center text-purple-300">
                         <i className={service.id === 'landing' ? 'fas fa-rocket' : service.id === 'company' ? 'fas fa-building' : 'fas fa-store'} />
                       </div>
                       <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
@@ -96,7 +96,7 @@ export default function WebServices() {
                     </div>
 
                     <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
-                    <div className="text-2xl md:text-3xl font-black text-[#00F0FF] mb-4">
+                    <div className="text-2xl md:text-3xl font-black text-purple-400 mb-4">
                       {service.price}
                     </div>
                     <p className="text-zinc-400 text-xs leading-relaxed mb-8">
@@ -106,7 +106,7 @@ export default function WebServices() {
                     <div className="flex flex-col gap-3 mb-8">
                       {service.features.map(feat => (
                         <div key={feat} className="flex items-start gap-2.5 text-xs text-zinc-300">
-                          <i className="fas fa-check text-[#00F0FF] mt-0.5" />
+                          <i className="fas fa-check text-purple-400 mt-0.5" />
                           <span>{feat}</span>
                         </div>
                       ))}
@@ -117,7 +117,7 @@ export default function WebServices() {
                     href={`https://wa.me/6285730182757?text=${encodeURIComponent(service.whatsappText)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00F0FF] to-[#0088FF] text-[#050811] font-bold text-xs uppercase tracking-wider text-center shadow-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white font-bold text-xs uppercase tracking-wider text-center shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                   >
                     <i className="fab fa-whatsapp text-sm" />
                     PILIH PAKET
