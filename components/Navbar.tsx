@@ -1,15 +1,16 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
-  { href: '#home', label: 'HOME' },
-  { href: '#services', label: 'SERVICES' },
-  { href: '#projects', label: 'PROJECT' },
-  { href: '#gallery', label: 'GALLERY' },
-  { href: '#about', label: 'ABOUT' },
-  { href: '#contact', label: 'CONTACT' },
+  { href: '/', label: 'HOME' },
+  { href: '/services', label: 'SERVICES' },
+  { href: '/projects', label: 'PROJECT' },
+  { href: '/gallery', label: 'GALLERY' },
+  { href: '/about', label: 'ABOUT' },
+  { href: '/contact', label: 'CONTACT' },
 ]
 
 export default function Navbar() {
@@ -25,25 +26,25 @@ export default function Navbar() {
       <div className="section-container flex items-center justify-between h-20">
         
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="w-9 h-9 rounded-xl bg-purple-950/60 border border-purple-500/50 flex items-center justify-center text-purple-400 font-black text-sm shadow-[0_0_15px_rgba(168,85,247,0.3)]">
             FC
           </div>
           <span className="font-black text-lg tracking-wider text-white">
             Fadl<span className="text-purple-400 drop-shadow-[0_0_10px_rgba(168,85,247,0.6)]">Collection</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(link => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-xs font-mono tracking-widest text-zinc-400 hover:text-purple-400 transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -79,14 +80,14 @@ export default function Navbar() {
             className="md:hidden bg-[#07040D]/95 backdrop-blur-lg border-b border-purple-500/30 px-6 py-6 flex flex-col gap-4"
           >
             {navLinks.map(link => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-sm font-mono tracking-widest text-zinc-300 hover:text-purple-400"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a
               href="https://wa.me/6285730182757"
